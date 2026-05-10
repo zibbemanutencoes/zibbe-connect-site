@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FinalCTA, ItemList, PageHero, WhatsAppButton } from "@/components/Page";
+import { FinalCTA, ItemList, PageHero, SectionHeading, WhatsAppButton } from "@/components/Page";
+import heroImg from "@/assets/hero-tools.jpg";
 
 export const Route = createFileRoute("/ferramentas")({
   head: () => ({
@@ -8,14 +9,11 @@ export const Route = createFileRoute("/ferramentas")({
       {
         name: "description",
         content:
-          "Loja de ferramentas em Três Marias - MG: furadeiras, parafusadeiras, esmerilhadeiras, serras, roçadeiras, motosserras e acessórios. Solicite orçamento.",
+          "Furadeiras, parafusadeiras, esmerilhadeiras, serras, roçadeiras, motosserras e acessórios em Três Marias - MG.",
       },
       { property: "og:title", content: "Loja de Ferramentas em Três Marias - MG" },
-      {
-        property: "og:description",
-        content:
-          "Ferramentas elétricas, a combustão e acessórios para profissionais e empresas em Três Marias - MG.",
-      },
+      { property: "og:description", content: "Ferramentas elétricas, a combustão e acessórios profissionais." },
+      { property: "og:image", content: heroImg },
     ],
   }),
   component: Ferramentas,
@@ -36,14 +34,15 @@ function Ferramentas() {
     <>
       <PageHero
         eyebrow="Ferramentas"
-        title="Loja de Ferramentas em Três Marias - MG"
-        subtitle="A Zibbe oferece ferramentas elétricas, ferramentas a combustão, acessórios e soluções para profissionais, empresas e uso doméstico."
+        title="Loja de Ferramentas em Três Marias"
+        subtitle="Ferramentas elétricas, a combustão e acessórios para profissionais e empresas."
+        image={heroImg}
       />
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-xl md:text-2xl font-bold mb-6">O que você encontra</h2>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <SectionHeading eyebrow="Catálogo" title="O que você encontra" />
         <ItemList items={items} />
-        <div className="mt-10">
-          <WhatsAppButton size="lg">Solicitar orçamento no WhatsApp</WhatsAppButton>
+        <div className="mt-12">
+          <WhatsAppButton size="lg">Solicitar orçamento</WhatsAppButton>
         </div>
       </section>
       <FinalCTA />
