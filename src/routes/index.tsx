@@ -41,7 +41,7 @@ const services = [
 
 const trust = [
   { icon: Wrench, title: "Elétricas", label: "manutenção especializada" },
-  { icon: Cog, title: "Combustão", label: "equipamentos a combustão" },
+  { icon: Cog, title: "Combustão", label: "equipamentos e motores" },
   { icon: ShieldCheck, title: "EPIs", label: "equipamentos certificados" },
 ];
 
@@ -85,9 +85,6 @@ function Index() {
               <p className="mt-5 text-sm sm:text-base md:text-lg opacity-90 max-w-lg leading-relaxed">
                 Manutenção de ferramentas elétricas e equipamentos a combustão em Três Marias - MG.
               </p>
-              <p className="mt-2 text-xs sm:text-sm opacity-70 max-w-lg leading-relaxed">
-                Atendimento para indústrias, empresas, profissionais e hobbystas.
-              </p>
             </Reveal>
 
             <Reveal delay={260}>
@@ -118,13 +115,13 @@ function Index() {
               {trust.map((b) => (
                 <div
                   key={b.title}
-                  className="glass rounded-lg p-4 sm:p-5 hover-lift hover:border-accent/50"
+                  className="glass rounded-lg p-3 sm:p-5 hover-lift hover:border-accent/50 min-w-0"
                 >
                   <b.icon className="h-5 w-5 text-accent mb-2 sm:mb-3" />
-                  <div className="font-display font-black uppercase text-2xl sm:text-3xl leading-none">
+                  <div className="font-display font-black uppercase text-base sm:text-2xl md:text-3xl leading-tight break-words">
                     {b.title}
                   </div>
-                  <div className="text-[10px] sm:text-xs opacity-70 mt-1.5 uppercase tracking-wider">
+                  <div className="text-[10px] sm:text-xs opacity-70 mt-1.5 uppercase tracking-wider break-words">
                     {b.label}
                   </div>
                 </div>
