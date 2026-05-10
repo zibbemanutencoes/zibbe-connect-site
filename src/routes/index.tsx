@@ -85,13 +85,13 @@ function Index() {
 
             <Reveal delay={180}>
               <p className="mt-7 text-base md:text-lg opacity-85 max-w-md leading-relaxed">
-                Soluções técnicas para empresas e profissionais.
+                Soluções técnicas para empresas e profissionais. Orçamento em minutos pelo WhatsApp.
               </p>
             </Reveal>
 
             <Reveal delay={260}>
               <div className="mt-9 flex flex-wrap gap-3">
-                <WhatsAppButton size="lg" />
+                <WhatsAppButton size="lg">Orçamento em minutos</WhatsAppButton>
                 <Link
                   to="/ferramentas"
                   className="group inline-flex items-center gap-2 px-7 py-4 rounded text-sm font-bold uppercase tracking-wider glass hover:border-accent hover:text-accent transition-all duration-300"
@@ -99,6 +99,14 @@ function Index() {
                   Ver catálogo
                   <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+              </div>
+            </Reveal>
+
+            <Reveal delay={340}>
+              <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs uppercase tracking-wider opacity-80">
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Resposta em até 1h</span>
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Loja física em Três Marias</span>
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Nota fiscal</span>
               </div>
             </Reveal>
           </div>
