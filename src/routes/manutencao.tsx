@@ -17,7 +17,7 @@ export const Route = createFileRoute("/manutencao")({
       {
         name: "keywords",
         content:
-          "manutenção de ferramentas em Três Marias, assistência técnica de ferramentas em Três Marias, manutenção industrial em Três Marias, conserto de ferramentas Três Marias",
+          "manutenção de ferramentas elétricas, manutenção de equipamentos a combustão, assistência técnica em Três Marias, conserto de ferramentas Três Marias",
       },
       {
         property: "og:title",
@@ -50,14 +50,14 @@ function Manutencao() {
       <PageHero
         eyebrow="Assistência técnica em Três Marias - MG"
         title="Manutenção de Ferramentas em Três Marias"
-        subtitle="Diagnóstico técnico, troca de peças e orçamento claro para ferramentas elétricas e equipamentos a combustão."
+        subtitle="Manutenção de ferramentas elétricas e equipamentos a combustão com diagnóstico técnico, troca de peças e orçamento claro. Atendimento para indústrias, empresas, profissionais e hobbystas."
         image={maintImg}
       />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <SectionHeading
           eyebrow="Serviços"
           title="O que fazemos"
-          description="Assistência técnica especializada para profissionais, empresas e produtores rurais em Três Marias e região."
+          description="Assistência técnica especializada em manutenção de ferramentas elétricas e equipamentos a combustão para indústrias, empresas, profissionais e hobbystas em Três Marias e região."
         />
         <ItemList items={items} />
         <div className="mt-12">
@@ -67,12 +67,12 @@ function Manutencao() {
         <div className="mt-20 grid md:grid-cols-2 gap-6">
           <div className="bg-card border border-border rounded-lg p-7">
             <h2 className="font-display font-bold text-xl uppercase tracking-wide">
-              Manutenção industrial em Três Marias
+              Manutenção de ferramentas elétricas
             </h2>
             <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-              Atendemos indústrias e empresas com manutenção preventiva e
-              corretiva de ferramentas e equipamentos. Reduzimos paradas e
-              aumentamos a vida útil dos seus ativos.
+              Atendemos indústrias, empresas, profissionais e hobbystas com
+              manutenção de furadeiras, esmerilhadeiras, parafusadeiras, serras
+              e demais ferramentas elétricas em Três Marias - MG.
             </p>
           </div>
           <div className="bg-card border border-border rounded-lg p-7">
