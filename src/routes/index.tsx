@@ -62,10 +62,10 @@ function Index() {
         <div className="absolute -top-40 -left-40 w-[36rem] h-[36rem] bg-accent/15 blur-3xl rounded-full float-slow" />
         <div className="absolute bottom-0 right-0 w-1.5 h-2/3 bg-accent" />
 
-        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 pt-20 pb-24 md:pt-28 md:pb-36">
-          <div className="max-w-3xl">
+        <div className="relative max-w-7xl mx-auto px-5 sm:px-6 pt-16 pb-20 md:pt-20 md:pb-24">
+          <div className="max-w-2xl">
             <Reveal>
-              <div className="inline-flex items-center gap-2 mb-6 glass px-3 py-1.5 rounded-full">
+              <div className="inline-flex items-center gap-2 mb-5 glass px-3 py-1.5 rounded-full">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent pulse-accent" />
                 <span className="text-[11px] uppercase tracking-[0.3em] font-semibold">
                   Três Marias - MG
@@ -74,14 +74,19 @@ function Index() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl leading-[0.95] uppercase">
-                Ferramentas, <span className="text-accent">EPIs</span> e manutenção de ferramentas em Três Marias
+              <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl leading-[1.05] uppercase">
+                Ferramentas, <span className="text-accent">EPIs</span>
+                <br />
+                e assistência técnica
               </h1>
             </Reveal>
 
             <Reveal delay={180}>
-              <p className="mt-7 text-base md:text-lg opacity-85 max-w-xl leading-relaxed">
-                Atendimento especializado para indústrias, empresas, profissionais e hobbystas, com manutenção de ferramentas elétricas, equipamentos a combustão, EPIs e soluções técnicas.
+              <p className="mt-5 text-sm sm:text-base md:text-lg opacity-90 max-w-lg leading-relaxed">
+                Manutenção de ferramentas elétricas e equipamentos a combustão em Três Marias - MG.
+              </p>
+              <p className="mt-2 text-xs sm:text-sm opacity-70 max-w-lg leading-relaxed">
+                Atendimento para indústrias, empresas, profissionais e hobbystas.
               </p>
             </Reveal>
 
@@ -109,7 +114,7 @@ function Index() {
 
           {/* trust strip */}
           <Reveal delay={400}>
-            <div className="mt-16 md:mt-24 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
+            <div className="mt-12 md:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
               {trust.map((b) => (
                 <div
                   key={b.title}
