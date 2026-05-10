@@ -96,6 +96,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Zibbe Ferramentas e Manutenções - Três Marias - MG" },
+      { name: "description", content: "Zibbe Connect: A modern, responsive website for tool sales, PPE, and maintenance services." },
+      { property: "og:description", content: "Zibbe Connect: A modern, responsive website for tool sales, PPE, and maintenance services." },
+      { name: "twitter:description", content: "Zibbe Connect: A modern, responsive website for tool sales, PPE, and maintenance services." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/324bf296-cb0e-46f1-ba6f-9f54cd5c6b3d/id-preview-63931a3b--66a088f8-7f6a-4181-bafb-5023886a48d2.lovable.app-1778426948894.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/324bf296-cb0e-46f1-ba6f-9f54cd5c6b3d/id-preview-63931a3b--66a088f8-7f6a-4181-bafb-5023886a48d2.lovable.app-1778426948894.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
