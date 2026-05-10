@@ -5,13 +5,24 @@ import { PageHero, SectionHeading, WhatsAppButton } from "@/components/Page";
 export const Route = createFileRoute("/contato")({
   head: () => ({
     meta: [
-      { title: "Contato - Zibbe Ferramentas - Três Marias - MG" },
+      {
+        title:
+          "Contato Zibbe Ferramentas - Três Marias - MG | WhatsApp (38) 99951-0974",
+      },
       {
         name: "description",
-        content: "Fale com a Zibbe em Três Marias - MG. WhatsApp (38) 99951-0974, Rua Curitiba, 12 - Centro.",
+        content:
+          "Fale com a Zibbe Ferramentas em Três Marias - MG. Loja de ferramentas, EPIs e assistência técnica. WhatsApp (38) 99951-0974, Rua Curitiba, 12 - Centro.",
       },
-      { property: "og:title", content: "Fale com a Zibbe - Três Marias - MG" },
-      { property: "og:description", content: "Atendimento via WhatsApp, e-mail e na loja." },
+      {
+        property: "og:title",
+        content: "Fale com a Zibbe Ferramentas - Três Marias - MG",
+      },
+      {
+        property: "og:description",
+        content:
+          "Atendimento via WhatsApp, e-mail e na loja em Três Marias - MG.",
+      },
     ],
   }),
   component: Contato,
