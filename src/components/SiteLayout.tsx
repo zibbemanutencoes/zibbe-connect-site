@@ -1,5 +1,5 @@
 import { Link, Outlet } from "@tanstack/react-router";
-import { MessageCircle, Menu, X, Phone } from "lucide-react";
+import { MessageCircle, Menu, X, Phone, Instagram } from "lucide-react";
 import { useState } from "react";
 import { ZibbeLogo } from "./ZibbeLogo";
 
@@ -143,6 +143,16 @@ export function SiteLayout() {
               Ferramentas, EPIs e assistência técnica especializada para empresas e
               profissionais em Três Marias - MG.
             </p>
+            <a
+              href="https://www.instagram.com/zibbeferramentas/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 mt-5 text-sm font-semibold uppercase tracking-wide hover:text-accent transition"
+              aria-label="Instagram da Zibbe"
+            >
+              <Instagram className="h-5 w-5 text-accent" />
+              @zibbeferramentas
+            </a>
           </div>
           <div>
             <div className="font-display font-bold text-base uppercase tracking-wider text-accent mb-3">Áreas</div>
