@@ -103,16 +103,37 @@ export function SiteLayout() {
         <Outlet />
       </main>
 
-      {/* Floating WhatsApp */}
+      {/* Floating WhatsApp (desktop) */}
       <a
         href={WHATSAPP}
         target="_blank"
         rel="noopener noreferrer"
-        className="fixed bottom-5 right-5 z-50 bg-accent text-accent-foreground p-4 rounded-full shadow-accent pulse-accent hover:scale-110 transition-transform"
+        className="hidden md:inline-flex fixed bottom-6 right-6 z-50 items-center gap-2 bg-accent text-accent-foreground pl-4 pr-5 py-3.5 rounded-full shadow-accent pulse-accent hover:scale-105 transition-transform font-bold text-sm uppercase tracking-wide"
         aria-label="Falar no WhatsApp"
       >
-        <MessageCircle className="h-6 w-6" />
+        <MessageCircle className="h-5 w-5" />
+        Orçamento agora
       </a>
+
+      {/* Mobile sticky CTA bar */}
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-50 grid grid-cols-2 gap-px bg-primary-deep border-t-2 border-accent shadow-2xl">
+        <a
+          href="tel:+5538999510974"
+          className="flex items-center justify-center gap-2 py-3.5 bg-primary text-primary-foreground font-bold text-sm uppercase tracking-wide active:opacity-80"
+          aria-label="Ligar para Zibbe"
+        >
+          <Phone className="h-4 w-4 text-accent" /> Ligar
+        </a>
+        <a
+          href={WHATSAPP}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center justify-center gap-2 py-3.5 bg-accent text-accent-foreground font-bold text-sm uppercase tracking-wide active:opacity-90"
+        >
+          <MessageCircle className="h-4 w-4" /> Orçamento
+        </a>
+      </div>
+      <div className="md:hidden h-14" aria-hidden />
 
       <footer className="bg-primary-deep text-primary-foreground mt-20 border-t-4 border-accent">
         <div className="max-w-7xl mx-auto px-6 py-14 grid gap-10 md:grid-cols-4 text-sm">
