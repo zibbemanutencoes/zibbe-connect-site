@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FinalCTA, ItemList, PageHero, WhatsAppButton } from "@/components/Page";
+import { FinalCTA, ItemList, PageHero, SectionHeading, WhatsAppButton } from "@/components/Page";
+import maintImg from "@/assets/maintenance.jpg";
 
 export const Route = createFileRoute("/manutencao")({
   head: () => ({
@@ -8,14 +9,11 @@ export const Route = createFileRoute("/manutencao")({
       {
         name: "description",
         content:
-          "Assistência técnica de ferramentas em Três Marias - MG. Manutenção de furadeiras, esmerilhadeiras, parafusadeiras, roçadeiras e motosserras.",
+          "Assistência técnica de ferramentas elétricas e equipamentos a combustão em Três Marias - MG.",
       },
       { property: "og:title", content: "Manutenção de Ferramentas em Três Marias - MG" },
-      {
-        property: "og:description",
-        content:
-          "Manutenção de ferramentas elétricas e equipamentos a combustão com diagnóstico e orçamento claro.",
-      },
+      { property: "og:description", content: "Diagnóstico, troca de peças e manutenção especializada." },
+      { property: "og:image", content: maintImg },
     ],
   }),
   component: Manutencao,
@@ -36,13 +34,14 @@ function Manutencao() {
     <>
       <PageHero
         eyebrow="Assistência técnica"
-        title="Manutenção de Ferramentas em Três Marias - MG"
-        subtitle="Realizamos manutenção de ferramentas elétricas e equipamentos a combustão com atendimento técnico, diagnóstico e orçamento claro."
+        title="Manutenção de Ferramentas"
+        subtitle="Diagnóstico, troca de peças e orçamento claro para ferramentas elétricas e a combustão."
+        image={maintImg}
       />
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-xl md:text-2xl font-bold mb-6">Serviços</h2>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <SectionHeading eyebrow="Serviços" title="O que fazemos" />
         <ItemList items={items} />
-        <div className="mt-10">
+        <div className="mt-12">
           <WhatsAppButton size="lg">Solicitar manutenção</WhatsAppButton>
         </div>
       </section>
