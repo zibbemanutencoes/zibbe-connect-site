@@ -32,7 +32,7 @@ const info = [
   { icon: MapPin, label: "Endereço", value: "Rua Curitiba, 12", sub: "Centro - Três Marias - MG" },
   { icon: Phone, label: "Telefone fixo", value: "(38) 3030-1035", sub: "Atendimento na loja" },
   { icon: Phone, label: "WhatsApp", value: "(38) 99951-0974", sub: "Atendimento direto" },
-  { icon: Mail, label: "E-mail", value: "gustavo@zibbe.com.br", sub: "Resposta em até 24h" },
+  { icon: Mail, label: "E-mail", value: "gustavo@zibbe.com.br", sub: "Resposta rápida" },
   { icon: Clock, label: "Horário", value: "Seg a Sáb", sub: "Seg-Sex 07h-18h · Sáb 07h-12h" },
 ];
 

@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Wrench, HardHat, Cog, ArrowRight, ShieldCheck, Award, Headset } from "lucide-react";
+import { Wrench, HardHat, Cog, ArrowRight, ShieldCheck } from "lucide-react";
 import { FinalCTA, SectionHeading, WhatsAppButton } from "@/components/Page";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-tools.jpg";
@@ -11,21 +11,21 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Ferramentas em Três Marias - MG | EPIs e Assistência Técnica | Zibbe",
+          "Ferramentas, EPIs e manutenção de ferramentas em Três Marias | Zibbe",
       },
       {
         name: "description",
         content:
-          "Ferramentas em Três Marias, EPIs em Três Marias e assistência técnica de ferramentas elétricas e a combustão. Atendimento rápido via WhatsApp na Zibbe.",
+          "Atendimento especializado para indústrias, empresas, profissionais e hobbystas em Três Marias - MG. Ferramentas elétricas, equipamentos a combustão, EPIs e manutenção de ferramentas.",
       },
       {
         property: "og:title",
-        content: "Ferramentas, EPIs e Manutenção em Três Marias - MG | Zibbe",
+        content: "Ferramentas, EPIs e manutenção de ferramentas em Três Marias",
       },
       {
         property: "og:description",
         content:
-          "Loja de ferramentas e EPIs em Três Marias - MG com assistência técnica e manutenção industrial especializada.",
+          "Manutenção de ferramentas elétricas, equipamentos a combustão, EPIs e ferramentas profissionais em Três Marias - MG.",
       },
       { property: "og:image", content: heroImg },
     ],
@@ -40,9 +40,9 @@ const services = [
 ];
 
 const trust = [
-  { icon: Award, title: "+10", label: "anos de mercado" },
-  { icon: ShieldCheck, title: "100%", label: "atendimento técnico" },
-  { icon: Headset, title: "24h", label: "resposta no WhatsApp" },
+  { icon: Wrench, title: "Elétricas", label: "manutenção especializada" },
+  { icon: Cog, title: "Combustão", label: "equipamentos a combustão" },
+  { icon: ShieldCheck, title: "EPIs", label: "equipamentos certificados" },
 ];
 
 function Index() {
@@ -74,24 +74,20 @@ function Index() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl leading-[0.88] uppercase">
-                Ferramentas.
-                <br />
-                <span className="text-accent">EPIs.</span>
-                <br />
-                Manutenção.
+              <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl leading-[0.95] uppercase">
+                Ferramentas, <span className="text-accent">EPIs</span> e manutenção de ferramentas em Três Marias
               </h1>
             </Reveal>
 
             <Reveal delay={180}>
-              <p className="mt-7 text-base md:text-lg opacity-85 max-w-md leading-relaxed">
-                Soluções técnicas para empresas e profissionais. Orçamento em minutos pelo WhatsApp.
+              <p className="mt-7 text-base md:text-lg opacity-85 max-w-xl leading-relaxed">
+                Atendimento especializado para indústrias, empresas, profissionais e hobbystas, com manutenção de ferramentas elétricas, equipamentos a combustão, EPIs e soluções técnicas.
               </p>
             </Reveal>
 
             <Reveal delay={260}>
               <div className="mt-9 flex flex-wrap gap-3">
-                <WhatsAppButton size="lg">Orçamento em minutos</WhatsAppButton>
+                <WhatsAppButton size="lg">Solicitar orçamento no WhatsApp</WhatsAppButton>
                 <Link
                   to="/ferramentas"
                   className="group inline-flex items-center gap-2 px-7 py-4 rounded text-sm font-bold uppercase tracking-wider glass hover:border-accent hover:text-accent transition-all duration-300"
@@ -104,9 +100,9 @@ function Index() {
 
             <Reveal delay={340}>
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs uppercase tracking-wider opacity-80">
-                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Resposta em até 1h</span>
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Indústrias e empresas</span>
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Profissionais e hobbystas</span>
                 <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Loja física em Três Marias</span>
-                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Nota fiscal</span>
               </div>
             </Reveal>
           </div>
@@ -215,10 +211,10 @@ function Index() {
 
           <div className="grid grid-cols-2 gap-4 sm:gap-5">
             {[
-              { v: "+10", l: "anos no mercado" },
-              { v: "100%", l: "atendimento técnico" },
-              { v: "24h", l: "resposta WhatsApp" },
-              { v: "MG", l: "Três Marias e região" },
+              { v: "Indústrias", l: "fornecimento e manutenção" },
+              { v: "Empresas", l: "atendimento dedicado" },
+              { v: "Profissionais", l: "ferramentas profissionais" },
+              { v: "Hobbystas", l: "suporte e peças" },
             ].map((s, i) => (
               <Reveal key={s.v} delay={i * 80}>
                 <div className={`hover-lift bg-primary-deep border-l-2 border-accent p-6 sm:p-7 shadow-industrial rounded-r ${i % 2 ? "mt-6" : ""}`}>
@@ -250,10 +246,11 @@ function Index() {
                 Referência em <span className="text-accent">Três Marias - MG</span>
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                A Zibbe atende clientes de Três Marias e região com venda de
-                ferramentas, EPIs e manutenção industrial. Trabalhamos com
-                indústrias, construtoras, oficinas, agricultores e profissionais
-                autônomos que precisam de suporte técnico ágil e confiável.
+                A Zibbe Ferramentas e Manutenções atua em Três Marias MG
+                oferecendo ferramentas, EPIs e manutenção de ferramentas
+                elétricas e equipamentos a combustão. Atendemos indústrias,
+                empresas, profissionais e hobbystas com foco em qualidade,
+                agilidade e atendimento especializado.
               </p>
             </div>
           </Reveal>
@@ -263,19 +260,19 @@ function Index() {
               {[
                 {
                   t: "Ferramentas em Três Marias",
-                  d: "Ferramentas elétricas, a combustão e acessórios para uso profissional e industrial.",
+                  d: "Ferramentas elétricas, a combustão e acessórios para uso profissional, indústrias, empresas e hobbystas.",
                 },
                 {
-                  t: "EPIs em Três Marias",
-                  d: "Linha completa de equipamentos de proteção individual com certificação e qualidade.",
+                  t: "Loja de EPI em Três Marias",
+                  d: "Linha completa de equipamentos de segurança e EPIs certificados para empresas e profissionais.",
                 },
                 {
-                  t: "Assistência técnica em Três Marias",
-                  d: "Diagnóstico, troca de peças e reparo especializado de ferramentas elétricas e motores.",
+                  t: "Manutenção de ferramentas elétricas",
+                  d: "Diagnóstico, troca de peças e reparo especializado de furadeiras, esmerilhadeiras, parafusadeiras e mais.",
                 },
                 {
-                  t: "Manutenção industrial em Três Marias",
-                  d: "Manutenção preventiva e corretiva para empresas, oficinas e operações de campo.",
+                  t: "Manutenção de equipamentos a combustão",
+                  d: "Assistência técnica em Três Marias para motosserras, roçadeiras e motores a combustão.",
                 },
               ].map((b) => (
                 <div
