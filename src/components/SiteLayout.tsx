@@ -169,7 +169,7 @@ export function SiteLayout() {
             <p className="opacity-90">Três Marias - MG</p>
             <p className="opacity-90 mt-2">(38) 3030-1035 · Fixo</p>
             <p className="opacity-90 flex items-center gap-1.5">(38) 99951-0974 <MessageCircle className="h-3.5 w-3.5 text-accent" /> WhatsApp</p>
-            <p className="opacity-90">gustavo@zibbe.com.br</p>
+            <p className="opacity-90">contato@zibbe.com.br</p>
           </div>
         </div>
         <div className="border-t border-primary-foreground/10 py-5 text-center text-xs opacity-60 uppercase tracking-widest">
