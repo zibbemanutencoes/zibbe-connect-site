@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Wrench, HardHat, Cog, ArrowRight, ShieldCheck, Award, Headset } from "lucide-react";
+import { Wrench, HardHat, Cog, ArrowRight, ShieldCheck } from "lucide-react";
 import { FinalCTA, SectionHeading, WhatsAppButton } from "@/components/Page";
 import { Reveal } from "@/components/Reveal";
 import heroImg from "@/assets/hero-tools.jpg";
@@ -74,24 +74,20 @@ function Index() {
             </Reveal>
 
             <Reveal delay={80}>
-              <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl leading-[0.88] uppercase">
-                Ferramentas.
-                <br />
-                <span className="text-accent">EPIs.</span>
-                <br />
-                Manutenção.
+              <h1 className="font-display font-black text-5xl sm:text-6xl md:text-7xl leading-[0.95] uppercase">
+                Ferramentas, <span className="text-accent">EPIs</span> e manutenção de ferramentas em Três Marias
               </h1>
             </Reveal>
 
             <Reveal delay={180}>
-              <p className="mt-7 text-base md:text-lg opacity-85 max-w-md leading-relaxed">
-                Soluções técnicas para empresas e profissionais. Orçamento em minutos pelo WhatsApp.
+              <p className="mt-7 text-base md:text-lg opacity-85 max-w-xl leading-relaxed">
+                Atendimento especializado para indústrias, empresas, profissionais e hobbystas, com manutenção de ferramentas elétricas, equipamentos a combustão, EPIs e soluções técnicas.
               </p>
             </Reveal>
 
             <Reveal delay={260}>
               <div className="mt-9 flex flex-wrap gap-3">
-                <WhatsAppButton size="lg">Orçamento em minutos</WhatsAppButton>
+                <WhatsAppButton size="lg">Solicitar orçamento no WhatsApp</WhatsAppButton>
                 <Link
                   to="/ferramentas"
                   className="group inline-flex items-center gap-2 px-7 py-4 rounded text-sm font-bold uppercase tracking-wider glass hover:border-accent hover:text-accent transition-all duration-300"
@@ -104,9 +100,9 @@ function Index() {
 
             <Reveal delay={340}>
               <div className="mt-6 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs uppercase tracking-wider opacity-80">
-                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Resposta em até 1h</span>
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Indústrias e empresas</span>
+                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Profissionais e hobbystas</span>
                 <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Loja física em Três Marias</span>
-                <span className="flex items-center gap-1.5"><span className="h-1.5 w-1.5 rounded-full bg-accent" /> Nota fiscal</span>
               </div>
             </Reveal>
           </div>
@@ -215,10 +211,10 @@ function Index() {
 
           <div className="grid grid-cols-2 gap-4 sm:gap-5">
             {[
-              { v: "+10", l: "anos no mercado" },
-              { v: "100%", l: "atendimento técnico" },
-              { v: "24h", l: "resposta WhatsApp" },
-              { v: "MG", l: "Três Marias e região" },
+              { v: "Indústrias", l: "fornecimento e manutenção" },
+              { v: "Empresas", l: "atendimento dedicado" },
+              { v: "Profissionais", l: "ferramentas profissionais" },
+              { v: "Hobbystas", l: "suporte e peças" },
             ].map((s, i) => (
               <Reveal key={s.v} delay={i * 80}>
                 <div className={`hover-lift bg-primary-deep border-l-2 border-accent p-6 sm:p-7 shadow-industrial rounded-r ${i % 2 ? "mt-6" : ""}`}>
