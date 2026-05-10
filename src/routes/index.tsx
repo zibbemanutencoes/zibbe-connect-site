@@ -269,7 +269,7 @@ function Index() {
           </Reveal>
 
           <Reveal delay={120}>
-            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+            <div className="lg:col-span-2 grid md:grid-cols-2 gap-4">
               {[
                 {
                   t: "Ferramentas em Três Marias",
@@ -290,9 +290,12 @@ function Index() {
               ].map((b) => (
                 <div
                   key={b.t}
-                  className="hover-lift bg-card border border-border rounded-lg p-6 hover:border-accent shadow-soft hover:shadow-industrial"
+                  className="hover-lift bg-card border border-border rounded-lg p-5 sm:p-6 hover:border-accent shadow-soft hover:shadow-industrial min-w-0"
                 >
-                  <h3 className="font-display font-bold text-lg uppercase tracking-wide">
+                  <h3
+                    className="font-display font-bold text-base sm:text-lg uppercase leading-snug tracking-normal"
+                    style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
+                  >
                     {b.t}
                   </h3>
                   <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
@@ -300,7 +303,7 @@ function Index() {
                   </p>
                 </div>
               ))}
-              <div className="sm:col-span-2 mt-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+              <div className="md:col-span-2 mt-2 text-xs uppercase tracking-[0.18em] text-muted-foreground leading-relaxed">
                 Atendemos Três Marias, Felixlândia, Morada Nova de Minas,
                 Biquinhas, Pompéu e região.
               </div>
