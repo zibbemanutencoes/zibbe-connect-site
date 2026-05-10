@@ -3,7 +3,7 @@ import { WHATSAPP } from "./SiteLayout";
 import { Reveal } from "./Reveal";
 
 export function WhatsAppButton({
-  children = "Falar no WhatsApp",
+  children = "Solicitar orçamento no WhatsApp",
   size = "md",
   variant = "accent",
 }: {
