@@ -219,7 +219,7 @@ function Index() {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-2 gap-4 sm:gap-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
             {[
               { v: "Indústrias", l: "fornecimento e manutenção" },
               { v: "Empresas", l: "atendimento dedicado" },
@@ -227,8 +227,11 @@ function Index() {
               { v: "Hobbystas", l: "suporte e peças" },
             ].map((s, i) => (
               <Reveal key={s.v} delay={i * 80}>
-                <div className={`hover-lift bg-primary-deep border-l-2 border-accent p-6 sm:p-7 shadow-industrial rounded-r ${i % 2 ? "mt-6" : ""}`}>
-                  <div className="font-display text-2xl sm:text-3xl md:text-4xl font-black text-accent leading-none break-words">
+                <div className={`hover-lift bg-primary-deep border-l-2 border-accent p-5 sm:p-6 md:p-7 shadow-industrial rounded-r ${i % 2 ? "sm:mt-6" : ""}`}>
+                  <div
+                    className="font-display text-2xl md:text-3xl font-black text-accent leading-tight"
+                    style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
+                  >
                     {s.v}
                   </div>
                   <div className="mt-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] opacity-80">
