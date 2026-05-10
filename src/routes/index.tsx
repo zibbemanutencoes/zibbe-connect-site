@@ -273,8 +273,8 @@ function Index() {
                   d: "Diagnóstico, troca de peças e reparo especializado de furadeiras, esmerilhadeiras, parafusadeiras e mais.",
                 },
                 {
-                  t: "Manutenção de equipamentos a combustão",
-                  d: "Assistência técnica em Três Marias para motosserras, roçadeiras e motores a combustão.",
+                  t: "Manutenção a combustão",
+                  d: "Assistência técnica para motosserras, roçadeiras, motores e equipamentos a combustão.",
                 },
               ].map((b) => (
                 <div
