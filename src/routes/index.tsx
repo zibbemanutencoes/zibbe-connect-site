@@ -227,6 +227,70 @@ function Index() {
         </div>
       </section>
 
+      {/* LOCAL SEO */}
+      <section className="bg-background">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 py-24 md:py-28 grid lg:grid-cols-3 gap-10">
+          <Reveal>
+            <div className="lg:col-span-1">
+              <div className="inline-flex items-center gap-2 mb-3">
+                <span className="h-px w-8 bg-accent" />
+                <span className="text-primary font-bold text-[11px] uppercase tracking-[0.3em]">
+                  Atendimento regional
+                </span>
+              </div>
+              <h2 className="font-display font-black text-3xl md:text-5xl uppercase leading-[0.95]">
+                Referência em <span className="text-accent">Três Marias - MG</span>
+              </h2>
+              <p className="mt-5 text-muted-foreground leading-relaxed">
+                A Zibbe atende clientes de Três Marias e região com venda de
+                ferramentas, EPIs e manutenção industrial. Trabalhamos com
+                indústrias, construtoras, oficinas, agricultores e profissionais
+                autônomos que precisam de suporte técnico ágil e confiável.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <div className="lg:col-span-2 grid sm:grid-cols-2 gap-4">
+              {[
+                {
+                  t: "Ferramentas em Três Marias",
+                  d: "Ferramentas elétricas, a combustão e acessórios para uso profissional e industrial.",
+                },
+                {
+                  t: "EPIs em Três Marias",
+                  d: "Linha completa de equipamentos de proteção individual com certificação e qualidade.",
+                },
+                {
+                  t: "Assistência técnica em Três Marias",
+                  d: "Diagnóstico, troca de peças e reparo especializado de ferramentas elétricas e motores.",
+                },
+                {
+                  t: "Manutenção industrial em Três Marias",
+                  d: "Manutenção preventiva e corretiva para empresas, oficinas e operações de campo.",
+                },
+              ].map((b) => (
+                <div
+                  key={b.t}
+                  className="hover-lift bg-card border border-border rounded-lg p-6 hover:border-accent shadow-soft hover:shadow-industrial"
+                >
+                  <h3 className="font-display font-bold text-lg uppercase tracking-wide">
+                    {b.t}
+                  </h3>
+                  <p className="mt-2 text-sm text-muted-foreground leading-relaxed">
+                    {b.d}
+                  </p>
+                </div>
+              ))}
+              <div className="sm:col-span-2 mt-2 text-xs uppercase tracking-[0.25em] text-muted-foreground">
+                Atendemos Três Marias, Felixlândia, Morada Nova de Minas,
+                Biquinhas, Pompéu e região.
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <FinalCTA />
     </>
   );
