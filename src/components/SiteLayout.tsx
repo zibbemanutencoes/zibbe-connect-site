@@ -23,7 +23,7 @@ export function SiteLayout() {
         <div className="max-w-7xl mx-auto px-6 h-9 flex items-center justify-between">
           <span className="uppercase tracking-widest">Três Marias - MG · Atendimento técnico especializado</span>
           <div className="flex items-center gap-5">
-            <span className="flex items-center gap-1.5"><Phone className="h-3 w-3 text-accent" /> (38) 3030-1035 · (38) 99951-0974</span>
+            <span className="flex items-center gap-1.5"><Phone className="h-3 w-3 text-accent" /> (38) 3030-1035 · (38) 99951-0974 <MessageCircle className="h-3 w-3 text-accent" /></span>
             <span>Seg-Sex 07h-18h · Sáb 07h-12h</span>
           </div>
         </div>
@@ -158,7 +158,7 @@ export function SiteLayout() {
             <p className="opacity-90">Rua Curitiba, 12 - Centro</p>
             <p className="opacity-90">Três Marias - MG</p>
             <p className="opacity-90 mt-2">(38) 3030-1035 · Fixo</p>
-            <p className="opacity-90">(38) 99951-0974 · WhatsApp</p>
+            <p className="opacity-90 flex items-center gap-1.5">(38) 99951-0974 <MessageCircle className="h-3.5 w-3.5 text-accent" /> WhatsApp</p>
             <p className="opacity-90">gustavo@zibbe.com.br</p>
           </div>
         </div>
