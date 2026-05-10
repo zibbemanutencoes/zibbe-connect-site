@@ -73,19 +73,81 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Venda de ferramentas, EPIs e manutenção de ferramentas elétricas e a combustão em Três Marias - MG. Atendimento rápido via WhatsApp.",
+          "Ferramentas em Três Marias, EPIs em Três Marias e assistência técnica em Três Marias - MG. Loja com atendimento rápido via WhatsApp.",
+      },
+      {
+        name: "keywords",
+        content:
+          "ferramentas em Três Marias, loja de ferramentas em Três Marias, EPI em Três Marias, loja de EPIs em Três Marias, manutenção de ferramentas em Três Marias, assistência técnica em Três Marias, manutenção industrial em Três Marias",
       },
       { name: "author", content: "Zibbe Ferramentas e Manutenções" },
+      { name: "robots", content: "index, follow, max-image-preview:large" },
+      { name: "geo.region", content: "BR-MG" },
+      { name: "geo.placename", content: "Três Marias" },
+      { name: "geo.position", content: "-18.2008;-45.2336" },
+      { name: "ICBM", content: "-18.2008, -45.2336" },
+      { property: "og:site_name", content: "Zibbe Ferramentas e Manutenções" },
+      { property: "og:locale", content: "pt_BR" },
       { property: "og:title", content: "Zibbe Ferramentas e Manutenções - Três Marias - MG" },
       {
         property: "og:description",
         content:
-          "Ferramentas, EPIs e assistência técnica especializada em Três Marias - MG.",
+          "Ferramentas, EPIs e manutenção de ferramentas em Três Marias - MG. Atendimento técnico rápido pelo WhatsApp.",
       },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "stylesheet", href: appCss }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "HardwareStore",
+          name: "Zibbe Ferramentas e Manutenções",
+          description:
+            "Loja de ferramentas, EPIs e assistência técnica de ferramentas elétricas e a combustão em Três Marias - MG.",
+          image: "https://zibbe.com.br/og.jpg",
+          telephone: "+55-38-99951-0974",
+          email: "gustavo@zibbe.com.br",
+          priceRange: "$$",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Rua Curitiba, 12 - Centro",
+            addressLocality: "Três Marias",
+            addressRegion: "MG",
+            postalCode: "39205-000",
+            addressCountry: "BR",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: -18.2008,
+            longitude: -45.2336,
+          },
+          areaServed: [
+            { "@type": "City", name: "Três Marias" },
+            { "@type": "City", name: "Felixlândia" },
+            { "@type": "City", name: "Morada Nova de Minas" },
+            { "@type": "City", name: "Biquinhas" },
+            { "@type": "City", name: "Pompéu" },
+          ],
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "08:00",
+              closes: "18:00",
+            },
+          ],
+          makesOffer: [
+            { "@type": "Offer", name: "Venda de Ferramentas em Três Marias" },
+            { "@type": "Offer", name: "Venda de EPIs em Três Marias" },
+            { "@type": "Offer", name: "Manutenção de Ferramentas em Três Marias" },
+            { "@type": "Offer", name: "Assistência Técnica em Três Marias" },
+          ],
+        }),
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
