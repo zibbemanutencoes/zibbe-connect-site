@@ -12,6 +12,7 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as ManutencaoRouteImport } from './routes/manutencao'
 import { Route as FerramentasRouteImport } from './routes/ferramentas'
 import { Route as EpisRouteImport } from './routes/epis'
+import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as IndexRouteImport } from './routes/index'
 
 const ManutencaoRoute = ManutencaoRouteImport.update({
@@ -29,6 +30,11 @@ const EpisRoute = EpisRouteImport.update({
   path: '/epis',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ContatoRoute = ContatoRouteImport.update({
+  id: '/contato',
+  path: '/contato',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -37,12 +43,14 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/epis': typeof EpisRoute
   '/ferramentas': typeof FerramentasRoute
   '/manutencao': typeof ManutencaoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/epis': typeof EpisRoute
   '/ferramentas': typeof FerramentasRoute
   '/manutencao': typeof ManutencaoRoute
@@ -50,20 +58,22 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/contato': typeof ContatoRoute
   '/epis': typeof EpisRoute
   '/ferramentas': typeof FerramentasRoute
   '/manutencao': typeof ManutencaoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/epis' | '/ferramentas' | '/manutencao'
+  fullPaths: '/' | '/contato' | '/epis' | '/ferramentas' | '/manutencao'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/epis' | '/ferramentas' | '/manutencao'
-  id: '__root__' | '/' | '/epis' | '/ferramentas' | '/manutencao'
+  to: '/' | '/contato' | '/epis' | '/ferramentas' | '/manutencao'
+  id: '__root__' | '/' | '/contato' | '/epis' | '/ferramentas' | '/manutencao'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  ContatoRoute: typeof ContatoRoute
   EpisRoute: typeof EpisRoute
   FerramentasRoute: typeof FerramentasRoute
   ManutencaoRoute: typeof ManutencaoRoute
@@ -92,6 +102,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof EpisRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/contato': {
+      id: '/contato'
+      path: '/contato'
+      fullPath: '/contato'
+      preLoaderRoute: typeof ContatoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -104,6 +121,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  ContatoRoute: ContatoRoute,
   EpisRoute: EpisRoute,
   FerramentasRoute: FerramentasRoute,
   ManutencaoRoute: ManutencaoRoute,
