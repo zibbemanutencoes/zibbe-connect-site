@@ -299,6 +299,54 @@ function Index() {
         </div>
       </section>
 
+      {/* BRANDS */}
+      <section className="bg-primary-deep text-primary-foreground border-t border-accent/20">
+        <div className="max-w-7xl mx-auto px-5 sm:px-6 py-20 md:py-24">
+          <Reveal>
+            <div className="text-center max-w-2xl mx-auto">
+              <div className="inline-flex items-center gap-2 mb-4">
+                <span className="h-px w-8 bg-accent" />
+                <span className="text-accent font-bold text-[11px] uppercase tracking-[0.3em]">
+                  Parceiros oficiais
+                </span>
+                <span className="h-px w-8 bg-accent" />
+              </div>
+              <h2 className="font-display font-black text-3xl md:text-5xl uppercase leading-[0.95]">
+                Marcas que <span className="text-accent">trabalhamos</span>
+              </h2>
+              <p className="mt-4 opacity-80 text-sm md:text-base">
+                Linhas selecionadas com qualidade, garantia e suporte técnico.
+              </p>
+            </div>
+          </Reveal>
+
+          <div className="mt-12 grid sm:grid-cols-2 gap-5 md:gap-6 max-w-4xl mx-auto">
+            {[
+              {
+                name: "INGCO",
+                desc: "Ferramentas elétricas, manuais e acessórios para uso profissional.",
+              },
+              {
+                name: "Branco Motores",
+                desc: "Motores, geradores e equipamentos a combustão de alta performance.",
+              },
+            ].map((b, i) => (
+              <Reveal key={b.name} delay={i * 100}>
+                <div className="hover-lift glass border border-white/10 hover:border-accent rounded-xl p-8 md:p-10 text-center transition-all">
+                  <div className="font-display font-black text-4xl md:text-5xl uppercase tracking-tight text-accent">
+                    {b.name}
+                  </div>
+                  <div className="mt-3 h-px w-12 bg-accent/40 mx-auto" />
+                  <p className="mt-4 text-sm opacity-80 leading-relaxed">
+                    {b.desc}
+                  </p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <FinalCTA />
     </>
   );
