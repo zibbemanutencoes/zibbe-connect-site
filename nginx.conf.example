@@ -1,0 +1,58 @@
+server {
+    listen 80;
+    listen [::]:80;
+    server_name zibbe.com.br www.zibbe.com.br;
+
+    # Após instalar SSL com certbot, descomente o redirect:
+    # return 301 https://zibbe.com.br$request_uri;
+
+    root /var/www/zibbe/dist;
+    index index.html;
+
+    # Compressão
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1024;
+    gzip_types text/plain text/css application/javascript application/json image/svg+xml;
+
+    # Cache longo para assets versionados
+    location /assets/ {
+        access_log off;
+        expires 1y;
+        add_header Cache-Control "public, immutable";
+        try_files $uri =404;
+    }
+
+    # Imagens / favicon
+    location ~* \.(?:png|jpg|jpeg|gif|webp|svg|ico|woff2?)$ {
+        access_log off;
+        expires 30d;
+        add_header Cache-Control "public";
+        try_files $uri =404;
+    }
+
+    # SPA fallback — qualquer rota vira index.html
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    # Não cachear o index.html
+    location = /index.html {
+        add_header Cache-Control "no-store, must-revalidate";
+    }
+}
+
+# --- HTTPS (após gerar certificado com: sudo certbot --nginx -d zibbe.com.br -d www.zibbe.com.br) ---
+# server {
+#     listen 443 ssl http2;
+#     listen [::]:443 ssl http2;
+#     server_name zibbe.com.br www.zibbe.com.br;
+#
+#     ssl_certificate     /etc/letsencrypt/live/zibbe.com.br/fullchain.pem;
+#     ssl_certificate_key /etc/letsencrypt/live/zibbe.com.br/privkey.pem;
+#
+#     root /var/www/zibbe/dist;
+#     index index.html;
+#
+#     # ... (mesmos blocos location de cima)
+# }
