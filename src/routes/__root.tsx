@@ -149,6 +149,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
               opens: "07:00",
               closes: "18:00",
             },
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Saturday"],
+              opens: "07:00",
+              closes: "12:00",
+            },
           ],
           makesOffer: [
             { "@type": "Offer", name: "Venda de Ferramentas em Três Marias" },
