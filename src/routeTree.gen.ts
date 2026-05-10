@@ -9,10 +9,16 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as ManutencaoRouteImport } from './routes/manutencao'
 import { Route as FerramentasRouteImport } from './routes/ferramentas'
 import { Route as EpisRouteImport } from './routes/epis'
 import { Route as IndexRouteImport } from './routes/index'
 
+const ManutencaoRoute = ManutencaoRouteImport.update({
+  id: '/manutencao',
+  path: '/manutencao',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FerramentasRoute = FerramentasRouteImport.update({
   id: '/ferramentas',
   path: '/ferramentas',
@@ -33,34 +39,45 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/epis': typeof EpisRoute
   '/ferramentas': typeof FerramentasRoute
+  '/manutencao': typeof ManutencaoRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/epis': typeof EpisRoute
   '/ferramentas': typeof FerramentasRoute
+  '/manutencao': typeof ManutencaoRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/epis': typeof EpisRoute
   '/ferramentas': typeof FerramentasRoute
+  '/manutencao': typeof ManutencaoRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/epis' | '/ferramentas'
+  fullPaths: '/' | '/epis' | '/ferramentas' | '/manutencao'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/epis' | '/ferramentas'
-  id: '__root__' | '/' | '/epis' | '/ferramentas'
+  to: '/' | '/epis' | '/ferramentas' | '/manutencao'
+  id: '__root__' | '/' | '/epis' | '/ferramentas' | '/manutencao'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   EpisRoute: typeof EpisRoute
   FerramentasRoute: typeof FerramentasRoute
+  ManutencaoRoute: typeof ManutencaoRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/manutencao': {
+      id: '/manutencao'
+      path: '/manutencao'
+      fullPath: '/manutencao'
+      preLoaderRoute: typeof ManutencaoRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ferramentas': {
       id: '/ferramentas'
       path: '/ferramentas'
@@ -89,6 +106,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   EpisRoute: EpisRoute,
   FerramentasRoute: FerramentasRoute,
+  ManutencaoRoute: ManutencaoRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
