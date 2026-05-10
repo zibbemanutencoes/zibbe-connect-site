@@ -24,7 +24,7 @@ export function SiteLayout() {
           <span className="uppercase tracking-widest">Três Marias - MG · Atendimento técnico especializado</span>
           <div className="flex items-center gap-5">
             <span className="flex items-center gap-1.5"><Phone className="h-3 w-3 text-accent" /> (38) 99951-0974</span>
-            <span>Seg a Sex · 07h às 18h</span>
+            <span>Seg-Sex 07h-18h · Sáb 07h-12h</span>
           </div>
         </div>
       </div>
