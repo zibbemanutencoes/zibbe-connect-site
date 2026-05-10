@@ -114,7 +114,7 @@ function Index() {
 
           {/* trust strip */}
           <Reveal delay={400}>
-            <div className="mt-16 md:mt-24 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
+            <div className="mt-12 md:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
               {trust.map((b) => (
                 <div
                   key={b.title}
