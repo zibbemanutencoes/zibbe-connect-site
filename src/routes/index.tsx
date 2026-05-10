@@ -218,7 +218,7 @@ function Index() {
             ].map((s, i) => (
               <Reveal key={s.v} delay={i * 80}>
                 <div className={`hover-lift bg-primary-deep border-l-2 border-accent p-6 sm:p-7 shadow-industrial rounded-r ${i % 2 ? "mt-6" : ""}`}>
-                  <div className="font-display text-5xl sm:text-6xl font-black text-accent leading-none">
+                  <div className="font-display text-2xl sm:text-3xl md:text-4xl font-black text-accent leading-none break-words">
                     {s.v}
                   </div>
                   <div className="mt-3 text-[10px] sm:text-xs uppercase tracking-[0.2em] opacity-80">
