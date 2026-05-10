@@ -246,10 +246,11 @@ function Index() {
                 Referência em <span className="text-accent">Três Marias - MG</span>
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
-                A Zibbe atende clientes de Três Marias e região com venda de
-                ferramentas, EPIs e manutenção industrial. Trabalhamos com
-                indústrias, construtoras, oficinas, agricultores e profissionais
-                autônomos que precisam de suporte técnico ágil e confiável.
+                A Zibbe Ferramentas e Manutenções atua em Três Marias MG
+                oferecendo ferramentas, EPIs e manutenção de ferramentas
+                elétricas e equipamentos a combustão. Atendemos indústrias,
+                empresas, profissionais e hobbystas com foco em qualidade,
+                agilidade e atendimento especializado.
               </p>
             </div>
           </Reveal>
@@ -259,19 +260,19 @@ function Index() {
               {[
                 {
                   t: "Ferramentas em Três Marias",
-                  d: "Ferramentas elétricas, a combustão e acessórios para uso profissional e industrial.",
+                  d: "Ferramentas elétricas, a combustão e acessórios para uso profissional, indústrias, empresas e hobbystas.",
                 },
                 {
-                  t: "EPIs em Três Marias",
-                  d: "Linha completa de equipamentos de proteção individual com certificação e qualidade.",
+                  t: "Loja de EPI em Três Marias",
+                  d: "Linha completa de equipamentos de segurança e EPIs certificados para empresas e profissionais.",
                 },
                 {
-                  t: "Assistência técnica em Três Marias",
-                  d: "Diagnóstico, troca de peças e reparo especializado de ferramentas elétricas e motores.",
+                  t: "Manutenção de ferramentas elétricas",
+                  d: "Diagnóstico, troca de peças e reparo especializado de furadeiras, esmerilhadeiras, parafusadeiras e mais.",
                 },
                 {
-                  t: "Manutenção industrial em Três Marias",
-                  d: "Manutenção preventiva e corretiva para empresas, oficinas e operações de campo.",
+                  t: "Manutenção de equipamentos a combustão",
+                  d: "Assistência técnica em Três Marias para motosserras, roçadeiras e motores a combustão.",
                 },
               ].map((b) => (
                 <div
