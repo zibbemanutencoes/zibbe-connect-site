@@ -40,9 +40,9 @@ const services = [
 ];
 
 const trust = [
-  { icon: Wrench, title: "Elétricas", label: "manutenção especializada" },
-  { icon: Cog, title: "Combustão", label: "equipamentos e motores" },
-  { icon: ShieldCheck, title: "EPIs", label: "equipamentos certificados" },
+  { icon: Wrench, title: ["Ferramentas", "elétricas"], label: "manutenção especializada" },
+  { icon: Cog, title: ["Motores a", "combustão"], label: "equipamentos e motores" },
+  { icon: ShieldCheck, title: ["EPIs"], label: "equipamentos certificados" },
 ];
 
 function Index() {
@@ -114,14 +114,22 @@ function Index() {
             <div className="mt-12 md:mt-16 grid grid-cols-3 gap-3 sm:gap-6 max-w-2xl">
               {trust.map((b) => (
                 <div
-                  key={b.title}
+                  key={b.title.join("-")}
                   className="glass rounded-lg p-3 sm:p-5 hover-lift hover:border-accent/50 min-w-0"
                 >
                   <b.icon className="h-5 w-5 text-accent mb-2 sm:mb-3" />
-                  <div className="font-display font-black uppercase text-base sm:text-2xl md:text-3xl leading-tight break-words">
-                    {b.title}
+                  <div
+                    className="font-display font-black uppercase text-sm sm:text-xl md:text-2xl leading-tight"
+                    style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
+                  >
+                    {b.title.map((line) => (
+                      <div key={line}>{line}</div>
+                    ))}
                   </div>
-                  <div className="text-[10px] sm:text-xs opacity-70 mt-1.5 uppercase tracking-wider break-words">
+                  <div
+                    className="text-[10px] sm:text-xs opacity-70 mt-1.5 uppercase tracking-wider"
+                    style={{ wordBreak: "normal", overflowWrap: "normal", hyphens: "none" }}
+                  >
                     {b.label}
                   </div>
                 </div>
