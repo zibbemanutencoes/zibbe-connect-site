@@ -11,21 +11,21 @@ export const Route = createFileRoute("/")({
     meta: [
       {
         title:
-          "Ferramentas em Três Marias - MG | EPIs e Assistência Técnica | Zibbe",
+          "Ferramentas, EPIs e manutenção de ferramentas em Três Marias | Zibbe",
       },
       {
         name: "description",
         content:
-          "Ferramentas em Três Marias, EPIs em Três Marias e assistência técnica de ferramentas elétricas e a combustão. Atendimento rápido via WhatsApp na Zibbe.",
+          "Atendimento especializado para indústrias, empresas, profissionais e hobbystas em Três Marias - MG. Ferramentas elétricas, equipamentos a combustão, EPIs e manutenção de ferramentas.",
       },
       {
         property: "og:title",
-        content: "Ferramentas, EPIs e Manutenção em Três Marias - MG | Zibbe",
+        content: "Ferramentas, EPIs e manutenção de ferramentas em Três Marias",
       },
       {
         property: "og:description",
         content:
-          "Loja de ferramentas e EPIs em Três Marias - MG com assistência técnica e manutenção industrial especializada.",
+          "Manutenção de ferramentas elétricas, equipamentos a combustão, EPIs e ferramentas profissionais em Três Marias - MG.",
       },
       { property: "og:image", content: heroImg },
     ],
@@ -40,9 +40,9 @@ const services = [
 ];
 
 const trust = [
-  { icon: Award, title: "+10", label: "anos de mercado" },
-  { icon: ShieldCheck, title: "100%", label: "atendimento técnico" },
-  { icon: Headset, title: "24h", label: "resposta no WhatsApp" },
+  { icon: Wrench, title: "Elétricas", label: "manutenção especializada" },
+  { icon: Cog, title: "Combustão", label: "equipamentos a combustão" },
+  { icon: ShieldCheck, title: "EPIs", label: "equipamentos certificados" },
 ];
 
 function Index() {
