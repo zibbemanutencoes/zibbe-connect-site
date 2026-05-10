@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { FinalCTA, ItemList, PageHero, WhatsAppButton } from "@/components/Page";
+import { FinalCTA, ItemList, PageHero, SectionHeading, WhatsAppButton } from "@/components/Page";
+import epiImg from "@/assets/epi-worker.jpg";
 
 export const Route = createFileRoute("/epis")({
   head: () => ({
@@ -8,14 +9,11 @@ export const Route = createFileRoute("/epis")({
       {
         name: "description",
         content:
-          "Loja de EPIs em Três Marias - MG: luvas, óculos, protetores auriculares, capacetes, botinas, máscaras e mais. Cotação rápida via WhatsApp.",
+          "EPIs em Três Marias - MG: luvas, óculos, protetores, capacetes, botinas, máscaras e mais.",
       },
       { property: "og:title", content: "Loja de EPIs em Três Marias - MG" },
-      {
-        property: "og:description",
-        content:
-          "Equipamentos de proteção individual para empresas, profissionais e prestadores de serviço em Três Marias - MG.",
-      },
+      { property: "og:description", content: "Equipamentos de proteção individual para empresas e profissionais." },
+      { property: "og:image", content: epiImg },
     ],
   }),
   component: Epis,
@@ -37,14 +35,15 @@ function Epis() {
     <>
       <PageHero
         eyebrow="EPIs"
-        title="Loja de EPIs em Três Marias - MG"
-        subtitle="Fornecemos equipamentos de proteção individual para empresas, profissionais e prestadores de serviço, com foco em segurança, qualidade e atendimento rápido."
+        title="Loja de EPIs em Três Marias"
+        subtitle="Equipamentos de proteção individual com qualidade, segurança e atendimento rápido."
+        image={epiImg}
       />
-      <section className="max-w-6xl mx-auto px-4 py-14">
-        <h2 className="text-xl md:text-2xl font-bold mb-6">Linha de EPIs</h2>
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
+        <SectionHeading eyebrow="Linha completa" title="EPIs disponíveis" />
         <ItemList items={items} />
-        <div className="mt-10">
-          <WhatsAppButton size="lg">Solicitar cotação de EPIs</WhatsAppButton>
+        <div className="mt-12">
+          <WhatsAppButton size="lg">Solicitar cotação</WhatsAppButton>
         </div>
       </section>
       <FinalCTA />
