@@ -114,7 +114,7 @@ export function SiteLayout() {
         aria-label="Falar no WhatsApp"
       >
         <MessageCircle className="h-5 w-5" />
-        Orçamento agora
+        Fale pelo WhatsApp
       </a>
 
       {/* Mobile sticky CTA bar */}
