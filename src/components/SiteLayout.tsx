@@ -4,8 +4,7 @@ import { useState } from "react";
 import { ZibbeLogo } from "./ZibbeLogo";
 
 const WHATSAPP =
-  "https://wa.me/5538999510974?text=" +
-  encodeURIComponent("Olá, gostaria de solicitar um orçamento.");
+  "https://wa.me/5538999510974?text=Ol%C3%A1%2C%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.";
 
 const navItems = [
   { to: "/", label: "Início" },
