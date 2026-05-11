@@ -3,7 +3,9 @@ import { MessageCircle, Menu, X, Phone, Instagram } from "lucide-react";
 import { useState } from "react";
 import { ZibbeLogo } from "./ZibbeLogo";
 
-const WHATSAPP = "https://wa.me/5538999510974";
+const WHATSAPP =
+  "https://wa.me/5538999510974?text=" +
+  encodeURIComponent("Olá, gostaria de solicitar um orçamento.");
 
 const navItems = [
   { to: "/", label: "Início" },
@@ -112,7 +114,7 @@ export function SiteLayout() {
         aria-label="Falar no WhatsApp"
       >
         <MessageCircle className="h-5 w-5" />
-        Orçamento agora
+        Fale pelo WhatsApp
       </a>
 
       {/* Mobile sticky CTA bar */}
